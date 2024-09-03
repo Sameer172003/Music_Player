@@ -207,6 +207,8 @@ pop_art_left.addEventListener("click", () => {
 
 let index = 0;
 let poster_master_play = document.getElementById("poster_master_play");
+let download_music=document.getElementById('download_music');
+
 let title = document.getElementById("title");
 Array.from(document.getElementsByClassName("playListPlay")).forEach((e) => {
   e.addEventListener("click", (el) => {
@@ -217,6 +219,8 @@ Array.from(document.getElementsByClassName("playListPlay")).forEach((e) => {
     music.play();
     masterPlay.classList.remove("bi-play-fill");
     masterPlay.classList.add("bi-pause-fill");
+
+    download_music.href=`audio/${index}.mp3`;
 
     let songTitles = songs.filter((els) => {
       return els.id == index;
@@ -309,13 +313,14 @@ back.addEventListener("click", () => {
   music.play();
   masterPlay.classList.remove("bi-play-fill");
   masterPlay.classList.add("bi-pause-fill");
-
+  download_music.href=`audio/${index}.mp3`;
   let songTitles = songs.filter((els) => {
     return els.id == index;
   });
   songTitles.forEach((elss) => {
     let { songName } = elss;
     title.innerHTML = songName;
+    download_music.setAttribute=('download',songName);
     // poster_master_play.src=poster;
   });
   wave.classList.add("active1");

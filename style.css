@@ -238,6 +238,8 @@ header .master_play .icon .shuffle{
     align-items: center;
 }
 header .master_play .icon #download_music{
+    text-decoration: none;
+    color: #fff;
     font-size: 20px;
     margin-left: 10px;
 }
@@ -670,10 +672,3 @@ header .song_side .popular_artists .item li img{
 header .song_side .popular_artists .item::-webkit-scrollbar{
     display: none;
 }
-/* header .song_side .popular_artists .item li{
-    min-width: 100px;
-    height: 140px;
-    list-style-type: none;
-    margin-right: 10px;
-    transition: 0.3s linear;
-}  */
